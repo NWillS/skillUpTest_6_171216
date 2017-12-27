@@ -15,6 +15,8 @@
 		BE4F74031FF37AE90058CB24 /* RealmDaoHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4F74021FF37AE90058CB24 /* RealmDaoHelper.swift */; };
 		BE4F74061FF37B150058CB24 /* MemoDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4F74041FF37B150058CB24 /* MemoDao.swift */; };
 		BE4F74071FF37B150058CB24 /* MemoDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4F74051FF37B150058CB24 /* MemoDto.swift */; };
+		BE4F740B1FF37C3F0058CB24 /* MemoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4F74091FF37C3F0058CB24 /* MemoListViewController.swift */; };
+		BE4F740C1FF37C3F0058CB24 /* MemoList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE4F740A1FF37C3F0058CB24 /* MemoList.storyboard */; };
 		ED58226D8C8E9D348DAFC253 /* Pods_skillUpTest_6_171216.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9E9EA753310DE7E6677474B /* Pods_skillUpTest_6_171216.framework */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +47,8 @@
 		BE4F74021FF37AE90058CB24 /* RealmDaoHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmDaoHelper.swift; sourceTree = "<group>"; };
 		BE4F74041FF37B150058CB24 /* MemoDao.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemoDao.swift; sourceTree = "<group>"; };
 		BE4F74051FF37B150058CB24 /* MemoDto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemoDto.swift; sourceTree = "<group>"; };
+		BE4F74091FF37C3F0058CB24 /* MemoListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemoListViewController.swift; sourceTree = "<group>"; };
+		BE4F740A1FF37C3F0058CB24 /* MemoList.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MemoList.storyboard; sourceTree = "<group>"; };
 		BFF110182DFE2726B084D3B6 /* Pods-skillUpTest_6_171216Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-skillUpTest_6_171216Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-skillUpTest_6_171216Tests/Pods-skillUpTest_6_171216Tests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -158,6 +162,7 @@
 		BE4F73FF1FF37A0B0058CB24 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				BE4F74081FF37C3F0058CB24 /* MemoList */,
 				BE4F74001FF37A200058CB24 /* LaunchScreen */,
 			);
 			path = Controllers;
@@ -177,6 +182,15 @@
 				BE4F74021FF37AE90058CB24 /* RealmDaoHelper.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		BE4F74081FF37C3F0058CB24 /* MemoList */ = {
+			isa = PBXGroup;
+			children = (
+				BE4F74091FF37C3F0058CB24 /* MemoListViewController.swift */,
+				BE4F740A1FF37C3F0058CB24 /* MemoList.storyboard */,
+			);
+			path = MemoList;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -269,6 +283,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BE4F73E71FF3783F0058CB24 /* LaunchScreen.storyboard in Resources */,
+				BE4F740C1FF37C3F0058CB24 /* MemoList.storyboard in Resources */,
 				BE4F73E41FF3783F0058CB24 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -392,6 +407,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BE4F74031FF37AE90058CB24 /* RealmDaoHelper.swift in Sources */,
+				BE4F740B1FF37C3F0058CB24 /* MemoListViewController.swift in Sources */,
 				BE4F74071FF37B150058CB24 /* MemoDto.swift in Sources */,
 				BE4F73DD1FF3783F0058CB24 /* AppDelegate.swift in Sources */,
 				BE4F74061FF37B150058CB24 /* MemoDao.swift in Sources */,
