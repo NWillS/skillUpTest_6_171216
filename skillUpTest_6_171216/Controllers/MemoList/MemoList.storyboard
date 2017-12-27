@@ -13,7 +13,7 @@
         <!--メモ-->
         <scene sceneID="8ri-y1-nE3">
             <objects>
-                <viewController id="LKB-bD-FFt" customClass="MemoListViewController" customModule="skillUpTest1216fin" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="LKB-bD-FFt" customClass="MemoListViewController" customModule="skillUpTest_6_171216" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="AFO-Fl-pla">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -25,7 +25,11 @@
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="15s-sp-Fch">
                                 <rect key="frame" x="0.0" y="623" width="375" height="44"/>
                                 <items>
-                                    <barButtonItem title="メモ追加" id="rz5-bT-ccG"/>
+                                    <barButtonItem title="メモ追加" id="rz5-bT-ccG">
+                                        <connections>
+                                            <action selector="tappedLeftBarButtonItem:" destination="LKB-bD-FFt" id="F7U-RM-dDH"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="JFf-S7-Fsx"/>
                                     <barButtonItem title="メモなし" id="sWs-Zr-rXo"/>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="Rk7-if-YSL"/>
@@ -46,6 +50,11 @@
                         <viewLayoutGuide key="safeArea" id="Nrm-Gx-hLc"/>
                     </view>
                     <navigationItem key="navigationItem" title="メモ" id="p4I-9g-22W"/>
+                    <connections>
+                        <outlet property="leftBarButtonItem" destination="rz5-bT-ccG" id="68A-K7-UbA"/>
+                        <outlet property="memoListTableView" destination="n1e-jS-gpA" id="tcr-ZY-5fX"/>
+                        <outlet property="rightBarButtonItem" destination="sWs-Zr-rXo" id="Auq-3W-yZI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nzl-tz-q5d" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
