@@ -12,6 +12,9 @@
 		BE4F73E41FF3783F0058CB24 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE4F73E31FF3783F0058CB24 /* Assets.xcassets */; };
 		BE4F73E71FF3783F0058CB24 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE4F73E51FF3783F0058CB24 /* LaunchScreen.storyboard */; };
 		BE4F73F21FF3783F0058CB24 /* skillUpTest_6_171216Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4F73F11FF3783F0058CB24 /* skillUpTest_6_171216Tests.swift */; };
+		BE4F74031FF37AE90058CB24 /* RealmDaoHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4F74021FF37AE90058CB24 /* RealmDaoHelper.swift */; };
+		BE4F74061FF37B150058CB24 /* MemoDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4F74041FF37B150058CB24 /* MemoDao.swift */; };
+		BE4F74071FF37B150058CB24 /* MemoDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4F74051FF37B150058CB24 /* MemoDto.swift */; };
 		ED58226D8C8E9D348DAFC253 /* Pods_skillUpTest_6_171216.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9E9EA753310DE7E6677474B /* Pods_skillUpTest_6_171216.framework */; };
 /* End PBXBuildFile section */
 
@@ -39,6 +42,9 @@
 		BE4F73ED1FF3783F0058CB24 /* skillUpTest_6_171216Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = skillUpTest_6_171216Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE4F73F11FF3783F0058CB24 /* skillUpTest_6_171216Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = skillUpTest_6_171216Tests.swift; sourceTree = "<group>"; };
 		BE4F73F31FF3783F0058CB24 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BE4F74021FF37AE90058CB24 /* RealmDaoHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmDaoHelper.swift; sourceTree = "<group>"; };
+		BE4F74041FF37B150058CB24 /* MemoDao.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemoDao.swift; sourceTree = "<group>"; };
+		BE4F74051FF37B150058CB24 /* MemoDto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemoDto.swift; sourceTree = "<group>"; };
 		BFF110182DFE2726B084D3B6 /* Pods-skillUpTest_6_171216Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-skillUpTest_6_171216Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-skillUpTest_6_171216Tests/Pods-skillUpTest_6_171216Tests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -105,6 +111,7 @@
 		BE4F73DB1FF3783F0058CB24 /* skillUpTest_6_171216 */ = {
 			isa = PBXGroup;
 			children = (
+				BE4F74011FF37AE90058CB24 /* Helpers */,
 				BE4F73FF1FF37A0B0058CB24 /* Controllers */,
 				BE4F73FE1FF37A050058CB24 /* Views */,
 				BE4F73FD1FF379FD0058CB24 /* Models */,
@@ -135,6 +142,8 @@
 		BE4F73FD1FF379FD0058CB24 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				BE4F74041FF37B150058CB24 /* MemoDao.swift */,
+				BE4F74051FF37B150058CB24 /* MemoDto.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -160,6 +169,14 @@
 				BE4F73E51FF3783F0058CB24 /* LaunchScreen.storyboard */,
 			);
 			path = LaunchScreen;
+			sourceTree = "<group>";
+		};
+		BE4F74011FF37AE90058CB24 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				BE4F74021FF37AE90058CB24 /* RealmDaoHelper.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -374,7 +391,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE4F74031FF37AE90058CB24 /* RealmDaoHelper.swift in Sources */,
+				BE4F74071FF37B150058CB24 /* MemoDto.swift in Sources */,
 				BE4F73DD1FF3783F0058CB24 /* AppDelegate.swift in Sources */,
+				BE4F74061FF37B150058CB24 /* MemoDao.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
