@@ -7,6 +7,7 @@ target 'skillUpTest_6_171216' do
 
   # Pods for skillUpTest_6_171216
   pod 'RealmSwift'
+  pod "STV-Extensions"
 
   target 'skillUpTest_6_171216Tests' do
     inherit! :search_paths

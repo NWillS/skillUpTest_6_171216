@@ -18,4 +18,10 @@ final class MemoDto: Object {
     override static func primaryKey() -> String? {
         return "memoId"
     }
+    func getTitle() -> String {
+        return memoText.lines[0]
+    }
+    func getText() -> String {
+        return memoText.lines[1]
+    }
 }

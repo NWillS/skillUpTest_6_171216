@@ -17,6 +17,9 @@
 		BE4F74071FF37B150058CB24 /* MemoDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4F74051FF37B150058CB24 /* MemoDto.swift */; };
 		BE4F740B1FF37C3F0058CB24 /* MemoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4F74091FF37C3F0058CB24 /* MemoListViewController.swift */; };
 		BE4F740C1FF37C3F0058CB24 /* MemoList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE4F740A1FF37C3F0058CB24 /* MemoList.storyboard */; };
+		BE4F740E1FF3802C0058CB24 /* MemoListTableViewProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4F740D1FF3802C0058CB24 /* MemoListTableViewProvider.swift */; };
+		BE4F74101FF3851D0058CB24 /* MemoListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4F740F1FF3851D0058CB24 /* MemoListTableViewCell.swift */; };
+		BE4F74141FF388EA0058CB24 /* String+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4F74121FF388EA0058CB24 /* String+Helper.swift */; };
 		ED58226D8C8E9D348DAFC253 /* Pods_skillUpTest_6_171216.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9E9EA753310DE7E6677474B /* Pods_skillUpTest_6_171216.framework */; };
 /* End PBXBuildFile section */
 
@@ -49,6 +52,9 @@
 		BE4F74051FF37B150058CB24 /* MemoDto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemoDto.swift; sourceTree = "<group>"; };
 		BE4F74091FF37C3F0058CB24 /* MemoListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemoListViewController.swift; sourceTree = "<group>"; };
 		BE4F740A1FF37C3F0058CB24 /* MemoList.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MemoList.storyboard; sourceTree = "<group>"; };
+		BE4F740D1FF3802C0058CB24 /* MemoListTableViewProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoListTableViewProvider.swift; sourceTree = "<group>"; };
+		BE4F740F1FF3851D0058CB24 /* MemoListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoListTableViewCell.swift; sourceTree = "<group>"; };
+		BE4F74121FF388EA0058CB24 /* String+Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Helper.swift"; sourceTree = "<group>"; };
 		BFF110182DFE2726B084D3B6 /* Pods-skillUpTest_6_171216Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-skillUpTest_6_171216Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-skillUpTest_6_171216Tests/Pods-skillUpTest_6_171216Tests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -115,6 +121,7 @@
 		BE4F73DB1FF3783F0058CB24 /* skillUpTest_6_171216 */ = {
 			isa = PBXGroup;
 			children = (
+				BE4F74111FF388EA0058CB24 /* Extensions */,
 				BE4F74011FF37AE90058CB24 /* Helpers */,
 				BE4F73FF1FF37A0B0058CB24 /* Controllers */,
 				BE4F73FE1FF37A050058CB24 /* Views */,
@@ -155,6 +162,8 @@
 		BE4F73FE1FF37A050058CB24 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				BE4F740D1FF3802C0058CB24 /* MemoListTableViewProvider.swift */,
+				BE4F740F1FF3851D0058CB24 /* MemoListTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -191,6 +200,14 @@
 				BE4F740A1FF37C3F0058CB24 /* MemoList.storyboard */,
 			);
 			path = MemoList;
+			sourceTree = "<group>";
+		};
+		BE4F74111FF388EA0058CB24 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				BE4F74121FF388EA0058CB24 /* String+Helper.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -355,11 +372,13 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-skillUpTest_6_171216/Pods-skillUpTest_6_171216-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/STV-Extensions/STV_Extensions.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/STV_Extensions.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -409,7 +428,10 @@
 				BE4F74031FF37AE90058CB24 /* RealmDaoHelper.swift in Sources */,
 				BE4F740B1FF37C3F0058CB24 /* MemoListViewController.swift in Sources */,
 				BE4F74071FF37B150058CB24 /* MemoDto.swift in Sources */,
+				BE4F74101FF3851D0058CB24 /* MemoListTableViewCell.swift in Sources */,
 				BE4F73DD1FF3783F0058CB24 /* AppDelegate.swift in Sources */,
+				BE4F740E1FF3802C0058CB24 /* MemoListTableViewProvider.swift in Sources */,
+				BE4F74141FF388EA0058CB24 /* String+Helper.swift in Sources */,
 				BE4F74061FF37B150058CB24 /* MemoDao.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

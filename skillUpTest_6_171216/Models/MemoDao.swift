@@ -8,11 +8,11 @@
 
 import Foundation
 
-class MemoDao{
+final class MemoDao{
     static let daoHelper = RealmDaoHelper<MemoDto>()
     
 //    メモの追加
-    func addMemo(memo:MemoDto) {
+    static func addMemo(memo:MemoDto) {
 //        空文字の場合は、保存しない。
         if (memo.memoText == ""){
             return
@@ -28,15 +28,20 @@ class MemoDao{
     }
     
 //    メモの全削除
-    func deleteAllMemo(){
+    static func deleteAllMemos(){
         MemoDao.daoHelper.deleteAll()
     }
 //    メモの更新
-    func updateMemo(memo:MemoDto) {
+    static func updateMemo(memo:MemoDto) {
         MemoDao.daoHelper.update(object: memo)
     }
 //    メモの1件削除
-    func deleteMemo(memo:MemoDto){
+    static func deleteMemo(memo:MemoDto){
         MemoDao.daoHelper.delete(object: memo)
+    }
+//    メモの全件取得
+    static func getAllMemos() -> [MemoDto] {
+        let memoList = MemoDao.daoHelper.findAll().sorted(byKeyPath: "updateDate", ascending: false)
+        return memoList.map { MemoDto(value: $0) }
     }
 }
