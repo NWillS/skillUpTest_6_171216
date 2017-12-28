@@ -10,7 +10,8 @@ import UIKit
 import STV_Extensions
 
 class MemoListTableViewProvider: UITableView,UITableViewDataSource {
-    var memoList:[MemoDto] = MemoDao.getAllMemos()
+    var memoList:[MemoDto] = []
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return memoList.count
     }
@@ -23,6 +24,11 @@ class MemoListTableViewProvider: UITableView,UITableViewDataSource {
         return cell
     }
     
-    
+    func resetMemoList(memoList:[MemoDto]){
+        self.memoList = memoList
+    }
+    func getMemoId(indexPath:IndexPath) -> Int{
+        return memoList[indexPath.row].memoId
+    }
 
 }

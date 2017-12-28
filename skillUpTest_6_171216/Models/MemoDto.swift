@@ -21,7 +21,12 @@ final class MemoDto: Object {
     func getTitle() -> String {
         return memoText.lines[0]
     }
-    func getText() -> String {
-        return memoText.lines[1]
+    func getText() -> String? {
+        print(memoText.lines.count)
+        if memoText.lines.count > 1{
+            
+            return memoText.lines[1]
+        }
+        return nil
     }
 }

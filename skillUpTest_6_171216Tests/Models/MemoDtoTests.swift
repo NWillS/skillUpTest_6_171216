@@ -53,7 +53,7 @@ class MemoDtoTests: XCTestCase {
 //        MARK:Textからタイトル取得
 //        setup
         let memo = MemoDto()
-        memo.memoText = "タイトル\nテキストテキスト"
+        memo.memoText = "タイトル\nテキスト\nテキスト"
         
 //        exercise
         let result = memo.getTitle()
@@ -63,16 +63,16 @@ class MemoDtoTests: XCTestCase {
         
     }
     func testGetText(){
-        //        MARK:Textからテキスト1行目取得
+        //        MARK:Textからテキストを取得
         //        setup
         let memo = MemoDto()
-        memo.memoText = "タイトル\nテキストテキスト"
+        memo.memoText = "タイトル\nテキスト\nテキスト"
         
         //        exercise
         let result = memo.getText()
         
         //        verify
-        XCTAssertEqual(result, "テキストテキスト")
+        XCTAssertEqual(result, "テキスト")
         
     }
 }

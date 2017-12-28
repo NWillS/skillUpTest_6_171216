@@ -119,6 +119,13 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		BE3009D91FF4E340006C007E /* MemoEdit */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = MemoEdit;
+			sourceTree = "<group>";
+		};
 		BE4F73D01FF3783F0058CB24 = {
 			isa = PBXGroup;
 			children = (
@@ -193,6 +200,7 @@
 		BE4F73FF1FF37A0B0058CB24 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				BE3009D91FF4E340006C007E /* MemoEdit */,
 				BE4F74001FF37A200058CB24 /* LaunchScreen */,
 				BE4F74081FF37C3F0058CB24 /* MemoList */,
 			);
