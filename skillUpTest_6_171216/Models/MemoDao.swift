@@ -35,13 +35,23 @@ final class MemoDao{
     static func updateMemo(memo:MemoDto) {
         MemoDao.daoHelper.update(object: memo)
     }
-//    メモの1件削除
-    static func deleteMemo(memo:MemoDto){
+//    メモの1件削除(memoID使用)
+    static func deleteMemo(memoID: Int){
+        guard let memo = daoHelper.findFirst(key: memoID as AnyObject) else{
+            return
+        }
         MemoDao.daoHelper.delete(object: memo)
     }
 //    メモの全件取得
     static func getAllMemos() -> [MemoDto] {
         let memoList = MemoDao.daoHelper.findAll().sorted(byKeyPath: "updateDate", ascending: false)
         return memoList.map { MemoDto(value: $0) }
+    }
+//    メモの1件取得(memoID使用)
+    static func getMemo(memoID: Int) -> MemoDto? {
+        guard let memo = daoHelper.findFirst(key: memoID as AnyObject) else{
+            return nil
+        }
+        return memo
     }
 }
