@@ -22,7 +22,6 @@ final class MemoDto: Object {
         return memoText.lines[0]
     }
     func getText() -> String? {
-        print(memoText.lines.count)
         if memoText.lines.count > 1{
             
             return memoText.lines[1]

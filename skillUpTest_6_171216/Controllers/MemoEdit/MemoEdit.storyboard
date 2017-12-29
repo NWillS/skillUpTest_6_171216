@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="MTG-8h-vW9">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--メモ-->
+        <scene sceneID="5RD-Tn-ObJ">
+            <objects>
+                <viewController id="MTG-8h-vW9" customClass="MemoEditViewController" customModule="skillUpTest_6_171216" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="NqS-Bw-dWx">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="lwd-SB-2MB">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="lwd-SB-2MB" firstAttribute="leading" secondItem="gkF-W2-rcs" secondAttribute="leading" id="3KY-EF-chp"/>
+                            <constraint firstItem="gkF-W2-rcs" firstAttribute="bottom" secondItem="lwd-SB-2MB" secondAttribute="bottom" id="AaV-v9-4Am"/>
+                            <constraint firstItem="lwd-SB-2MB" firstAttribute="top" secondItem="gkF-W2-rcs" secondAttribute="top" id="tpQ-mQ-2YG"/>
+                            <constraint firstItem="gkF-W2-rcs" firstAttribute="trailing" secondItem="lwd-SB-2MB" secondAttribute="trailing" id="yTF-pf-mqu"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="gkF-W2-rcs"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="メモ" id="UFB-EC-dcd">
+                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="TeO-xl-njh">
+                            <connections>
+                                <action selector="tappedDoneButton:" destination="MTG-8h-vW9" id="Y6Y-lC-dhg"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="bottom" destination="AaV-v9-4Am" id="HDX-3f-EAb"/>
+                        <outlet property="memoTextView" destination="lwd-SB-2MB" id="QWY-lC-0B4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="J2p-qn-RUa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="206" y="152"/>
+        </scene>
+    </scenes>
+</document>

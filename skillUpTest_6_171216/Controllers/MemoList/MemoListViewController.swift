@@ -8,7 +8,8 @@
 
 import UIKit
 
-class MemoListViewController: UIViewController {
+class MemoListViewController: UIViewController,MemoListViewProviderDelegate {
+    
     @IBOutlet weak var leftBarButtonItem: UIBarButtonItem!
     @IBOutlet weak var rightBarButtonItem: UIBarButtonItem!
     @IBOutlet weak var memoListTableView: MemoListTableViewProvider!
@@ -19,15 +20,18 @@ class MemoListViewController: UIViewController {
         navigationItem.rightBarButtonItem = editButtonItem
         memoListTableView.dataSource = memoListTableView
         memoListTableView.delegate = self
-        
+        memoListTableView.memoListVPDelegate = self
 
         
-        reloadTableView()
-        setRightButtonTitle()
+
 
         // Do any additional setup after loading the view.
     }
-
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        reloadTableView()
+        setRightButtonTitle()
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -47,6 +51,11 @@ class MemoListViewController: UIViewController {
             showActionSheet()
         }else{
 //            メモ追加
+            let memoEditSB = UIStoryboard(name: "MemoEdit", bundle: nil)
+            let memoEditVC = memoEditSB.instantiateInitialViewController() as! MemoEditViewController
+            
+            memoEditVC.memoId = 0
+            navigationController?.pushViewController(memoEditVC, animated: true)
         }
     }
     func showActionSheet() {
@@ -57,6 +66,7 @@ class MemoListViewController: UIViewController {
             guard let `self` = self else { return }
             MemoDao.deleteAllMemos()
             self.reloadTableView()
+            self.setRightButtonTitle()
             self.setEditing(false, animated: true)
         }
         let cancelAction = UIAlertAction(title: "キャンセル", style: .cancel, handler: nil)
@@ -78,14 +88,20 @@ class MemoListViewController: UIViewController {
             rightBarButtonItem.title = "\(count)件のメモ"
         }
     }
+    
+    func deletedMemo() {
+        setRightButtonTitle()
+    }
 }
 // MARK: - UITableViewDelegate
 extension MemoListViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let memoId:Int = memoListTableView.getMemoId(indexPath:indexPath)
-//        let memoEditVC = MemoEditViewController()
-//        memoEditVC.memoId = memoId
-//        navigationController?.pushViewController(memoEditVC, animated: true)
+        let memoEditSB = UIStoryboard(name: "MemoEdit", bundle: nil)
+        let memoEditVC = memoEditSB.instantiateInitialViewController() as! MemoEditViewController
+        
+        memoEditVC.memoId = memoId
+        navigationController?.pushViewController(memoEditVC, animated: true)
     }
 }

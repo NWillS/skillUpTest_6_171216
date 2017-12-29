@@ -9,8 +9,13 @@
 import UIKit
 import STV_Extensions
 
+protocol MemoListViewProviderDelegate {
+    func deletedMemo()
+}
+
 class MemoListTableViewProvider: UITableView,UITableViewDataSource {
     var memoList:[MemoDto] = []
+    var memoListVPDelegate:MemoListViewProviderDelegate!
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return memoList.count
@@ -31,4 +36,12 @@ class MemoListTableViewProvider: UITableView,UITableViewDataSource {
         return memoList[indexPath.row].memoId
     }
 
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        let memoId = memoList[indexPath.row].memoId
+        MemoDao.deleteMemo(memoID: memoId)
+        memoList.remove(at: indexPath.row)
+        tableView.deleteRows(at: [IndexPath(row: indexPath.row, section: 0)],
+                             with: .fade)
+        memoListVPDelegate.deletedMemo()
+    }
 }
